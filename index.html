@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d0ee281f5d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.svg" class="logo">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#links">Links</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Student</p>
+                <h1> Hi, I'm <span>Edith Kwadan-Naab</span><br> from Connecticut</h1>
+            </div>
+        </div>
+    </div>
+    <!--About Section-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi, I'm Edith, a Computer Science Major with a concentration in Information Systems at Southern Connecticut State University.</p>
+
+
+                    <div class="tab-titles">
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')">Relevant Courses</p>
+                        <p class="tab-links" onclick="opentab('projects')">Skills</p>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2021 - 2024</span><br> Southern Connecticut State University</li>
+                            <li><span> BSc. Computer Science - Information Systems </span></li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Systems Administration</span></li>
+                            <li><span>Software Design & Development</span></li>
+                            <li><span>Technical Writing/Communication</span></li>
+                            <li><span>Database Systems</span></li>
+                            <li><span>Internet Programming</span></li>
+                            <li><span>Business Information Systems</span></li>
+                            <li><span>Accounting</span></li>
+                            <li><span>Inter Applied Statistics</span></li>
+                            <li><span>Information Sytem Analysis & Tech</span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="projects">
+                        <ul>
+                            <li><span>Google Cloud Platform</span></li>
+                            <li><span>Linux</span></li>
+                            <li><span>SQL</span></li>
+                            <li><span> HTML </span></li>
+                            <li><span> CSS </span></li>
+                            <li><span> XAMPP </span></li>
+                            <li><span> Python (Basic) </span></li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services -->
+    <div id="links">
+        <div class="container">
+            <h1 class="sub-title">Links</h1>
+            <div class="links-list">
+                <div>
+                    <i class="fa-brands fa-linkedin"></i>
+                    <h2> LinkedIn</h2>
+                    <p> My LinkedIn Account</p>
+                    <a href="#">Click Here</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-github"></i>
+                    <h2> GitHub </h2>
+                    <p> GitHub Account</p>
+                    <a href="https://github.com/edithknaab?tab=repositories">Click Here</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-file"></i>
+                    <h2> Resume </h2>
+                    <p> My Current Resume</p>
+                    <a href="images/my-cv.pdf" download="Your_Resume.pdf">Download Resume</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <!-- Contact -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i><a href="mailto:edithkwadannaab@gmail.com">edithkwadannaab@gmail.com</a></p>
+                <p><i class="fa-solid fa-phone-volume"></i><a href="tel:+16463779415">+1 646 377 9415</a></p>
+                <div class="social-icons">
+                    <a href="https:instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/edith-kwadan-naab-8816361b2/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName('tab-links');
+        var tabcontents = document.getElementsByClassName('tab-contents');
+        function opentab(tabname){
+            for(var i = 0; i < tablinks.length; i++){
+                tablinks[i].classList.remove('active-link');
+            }
+            for(var i = 0; i < tabcontents.length; i++){
+                tabcontents[i].classList.remove('active-tab');
+            }
+            event.currentTarget.classList.add('active-link');
+            document.getElementById(tabname).classList.add('active-tab');
+        }
+    </script>
+    
+</body>
+</html>
